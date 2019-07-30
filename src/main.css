@@ -1,3 +1,34 @@
+body {
+    background-image: url(../assets/shapes.gif);
+    background-size: cover;
+}
+
+header {
+    text-align: center;
+    color: yellow;
+}
+
+h1 {
+    font-size: 5rem;    
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+div {
+    text-align: center;
+    color: yellow;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+section {
+    justify-content: center;
+}
+
 #products {
     display: flex;
 }
@@ -7,10 +38,32 @@ label {
 }
 
 img {
-    border: 1px black;
+    border: 2px solid  black;
+    border-radius: 10%;
+}
+
+img:hover {
+    border: 2px solid greenyellow;
 }
 
 .button {
     /* visibility: hidden; */
     display: none;
+}
+
+table {
+    margin: auto
+}
+
+thead {
+    
+}
+
+#refresh {
+    height: 60px;
+    width: 150px;
+    font-size: 1.5rem;
+    color: yellow;
+    background-color: maroon;
+    border-radius: 15%;
 }
