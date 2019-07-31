@@ -26,7 +26,7 @@
 
                 <label>
                     <figure id="left">
-                        <img src="https://via.placeholder.com/300x400" alt="">
+                        <img class="chooser" src="https://via.placeholder.com/300x400" alt="">
                         <figcaption></figcaption>
                         <input class="button" type="button" name="leftButton">
                     </figure>
@@ -34,7 +34,7 @@
                 
                 <label>
                     <figure id="center">
-                        <img src="https://via.placeholder.com/300x400" alt="">
+                        <img class="chooser" src="https://via.placeholder.com/300x400" alt="">
                         <figcaption></figcaption>
                     </figure>
                     <input class="button" type="button" name="centerButton">
@@ -42,7 +42,7 @@
                 
                 <label>
                     <figure id="right">
-                        <img src="https://via.placeholder.com/300x400" alt="">
+                        <img class="chooser" src="https://via.placeholder.com/300x400" alt="">
                         <figcaption></figcaption>
                     </figure>
                     <input class="button" type="button" name="rightButton">
@@ -52,30 +52,33 @@
         
         </div>
 
-        <div id="results">
-            
-            <h3>Your Favorite Products</h3>
+        <div id="results" hidden>
 
-            <section>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Item</th>
-                            <th>No. of Views</th>
-                            <th>No. of Clicks</th>
-                            <th>Your Rating</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+            <table>
+                <caption>Your Favorite Products</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Views</th>
+                        <th scope="col">Clicks</th>
+                        <th scope="col">Your Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row"><img src="https://via.placeholder.com/60x80" alt=""></td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>⭐</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><img src="https://via.placeholder.com/60x80" alt=""></td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>⭐⭐</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <button id="refresh" type="button">
                 Start Over
