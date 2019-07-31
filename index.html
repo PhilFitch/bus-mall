@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BusMall</title>
+    <link rel="stylesheet" type="text/css" href="src/main.css">
+</head>
+
+<body>
+    
+    <header>
+        <h1>Bus Mall</h1>
+        <h2>Market Survey</h2>
+    </header>
+    
+    <main>
+       
+        <div id="survey">
+           
+            <p>Click on the item below you are <em>most</em> likely to purchase:</p>
+            
+            <section id="products">
+
+                <label>
+                    <figure id="left">
+                        <img class="chooser" src="https://via.placeholder.com/300x400" alt="">
+                        <figcaption></figcaption>
+                        <input class="button" type="button" name="leftButton">
+                    </figure>
+                </label>
+                
+                <label>
+                    <figure id="center">
+                        <img class="chooser" src="https://via.placeholder.com/300x400" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                    <input class="button" type="button" name="centerButton">
+                </label>
+                
+                <label>
+                    <figure id="right">
+                        <img class="chooser" src="https://via.placeholder.com/300x400" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                    <input class="button" type="button" name="rightButton">
+                </label>
+            
+            </section>
+        
+        </div>
+
+        <div id="results" hidden>
+
+            <table>
+                <caption>Your Favorite Products</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Views</th>
+                        <th scope="col">Clicks</th>
+                        <th scope="col">Your Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row"><img src="https://via.placeholder.com/60x80" alt=""></td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>⭐</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><img src="https://via.placeholder.com/60x80" alt=""></td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>⭐⭐</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button id="refresh" type="button">
+                Start Over
+            </button>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
