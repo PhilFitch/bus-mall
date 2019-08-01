@@ -54,16 +54,13 @@ function getRandomProduct() {
 
 export function populateOptions() {
     let previousOptions = store.getOptions(); //previous 3 options
-    // let duplicates = store.getDuplicates();
-    // let loops = 0;
     let newOptions = [];
     while(newOptions.length < 3) {
         let product = getRandomProduct();
         
         if(!newOptions.includes(product) && !previousOptions.includes(product)) {
             newOptions.push(product);
-            // loops++;
-
+            
             switch(product.code) {
                 case ('bag'): 
                     bagViews.push('view');
@@ -128,6 +125,7 @@ export function populateOptions() {
             }
         }
     }
+    console.log(productViews);
     store.save('Options', newOptions);
     return newOptions;
 }
