@@ -4,10 +4,9 @@ import populateOptions from './populate-options.js';
 const leftImage = document.getElementById('left-image');
 const centerImage = document.getElementById('center-image');
 const rightImage = document.getElementById('right-image');
-const leftButton = document.getElementsByName('left-button');
-const centerButton = document.getElementsByName('center-button');
-const rightButton = document.getElementsByName('right-button');
-const optionButtons = document.getElementsByClassName('button');
+const leftButton = document.getElementById('left-button');
+const centerButton = document.getElementById('center-button');
+const rightButton = document.getElementById('right-button');
 
 let turns = 0;
 let choices = [];
@@ -21,20 +20,19 @@ function loadImages() {
 window.onload = loadImages();
 
 
-optionButtons.addEventListener('click', () => {
-
-});
-
 leftButton.addEventListener('click', () => {
+    event.preventDefault();
     console.log('left!');
 });
 
 centerButton.addEventListener('click', () => {
+    event.preventDefault();
     console.log('center!');
     
 });
 
 rightButton.addEventListener('click', () => {
+    event.preventDefault();
     console.log('right!');
 
 });
