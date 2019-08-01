@@ -2,15 +2,17 @@ Page load:
 
 Reset user data
 
-Get products from local storage (bootstrap)
+x Get products from local storage (bootstrap)
 
-Get random product 1 (no-dup) (position Left)
+x Get random product 1 (no-dup) (position Left)
 
-Get random product 2 (double no-dup) (position center)
+x Get random product 2 (double no-dup) (position center)
 
-Get random product 3 (double no-dup) (position right)
+x Get random product 3 (double no-dup) (position right)
 
-Track product views
+x Track product views
+
+post products to page
 
 User choice (click)
 

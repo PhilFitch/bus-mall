@@ -2,122 +2,122 @@
 const bag = {
     code: 'bag',
     name: 'Bag',
-    img: 'asset/products/bag.jpg',
+    img: 'assets/products/bag.jpg',
     //object: bag
 };
 
 const banana = {
     code: 'banana',
     name: 'Banana',
-    img: 'asset/products/banana.jpg',
+    img: 'assets/products/banana.jpg',
 };
 
 const bathroom = {
     code: 'bathroom',
     name: 'Bathroom',
-    img: 'asset/products/bathroom.jpg',
+    img: 'assets/products/bathroom.jpg',
 };
 
 const boots = {
     code: 'boots',
     name: 'Boots',
-    img: 'asset/products/Boots.jpg',
+    img: 'assets/products/Boots.jpg',
 };
 
 const breakfast = {
     code: 'breakfast',
     name: 'Breakfast',
-    img: 'asset/products/breakfast.jpg',
+    img: 'assets/products/breakfast.jpg',
 };
 
 const bubblegum = {
     code: 'bubblegum',
     name: 'Bubblegum',
-    img: 'asset/products/bubblegum.jpg',
+    img: 'assets/products/bubblegum.jpg',
 };
 
 const chair = {
     code: 'chair',
     name: 'Chair',
-    img: 'asset/products/chair.jpg',
+    img: 'assets/products/chair.jpg',
 };
 
 const cthulhu = {
     code: 'cthulhu',
     name: 'Cthulhu',
-    img: 'asset/products/cthulhu.jpg',
+    img: 'assets/products/cthulhu.jpg',
 };
 
 const dogDuck = {
     code: 'dog-duck',
     name: 'Dog-Duck',
-    img: 'asset/products/dog-duck.jpg',
+    img: 'assets/products/dog-duck.jpg',
 };
 
 const dragon = {
     code: 'dragon',
     name: 'Dragon',
-    img: 'asset/products/dragon.jpg',
+    img: 'assets/products/dragon.jpg',
 };
 
 const pen = {
     code: 'pen',
     name: 'Pen',
-    img: 'asset/products/pen.jpg',
+    img: 'assets/products/pen.jpg',
 };
 
 const petSweep = {
     code: 'pet-sweep',
     name: 'Pet Sweep',
-    img: 'asset/products/pet-sweep.jpg',
+    img: 'assets/products/pet-sweep.jpg',
 };
 
 const scissors = {
     code: 'scissors',
     name: 'Scissors',
-    img: 'asset/products/scissors.jpg',
+    img: 'assets/products/scissors.jpg',
 };
 
 const shark = {
     code: 'shark',
     name: 'Shark',
-    img: 'asset/products/shark.jpg',
+    img: 'assets/products/shark.jpg',
 };
 
 const sweep = {
     code: 'sweep',
     name: 'Sweep',
-    img: 'asset/products/sweep.jpg',
+    img: 'assets/products/sweep.png',
 };
 
 const tauntaun = {
     code: 'tauntaun',
     name: 'Tauntaun',
-    img: 'asset/products/tauntaun.jpg',
+    img: 'assets/products/tauntaun.jpg',
 };
 
 const unicorn = {
     code: 'unicorn',
     name: 'Unicorn',
-    img: 'asset/products/unicorn.jpg',
+    img: 'assets/products/unicorn.jpg',
 };
 
 const usb = {
     code: 'usb',
     name: 'USB',
-    img: 'asset/products/usb.jpg',
+    img: 'assets/products/usb.gif',
 };
 
 const waterCan = {
     code: 'water-can',
     name: 'Water Can',
-    img: 'asset/products/water-can.jpg',
+    img: 'assets/products/water-can.jpg',
 };
 
 const wineGlass = {
     code: 'wine-glass',
     name: 'Wine Glass',
-    img: 'asset/products/wine-glass.jpg',
+    img: 'assets/products/wine-glass.jpg',
 };
 
 const products = [

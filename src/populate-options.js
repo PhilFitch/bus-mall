@@ -47,21 +47,22 @@ let productViews = [
 ];
 
 
-export function getRandomProduct() {
+function getRandomProduct() {
     let index = Math.floor(Math.random() * 20);
     return products[index];
 }
 
 export function populateOptions() {
-    let options = store.getOptions();
-    let duplicates = store.getDuplicates();
-    let loops = 0;
-    while(loops < 3) {
+    let previousOptions = store.getOptions(); //previous 3 options
+    // let duplicates = store.getDuplicates();
+    // let loops = 0;
+    let newOptions = [];
+    while(newOptions.length < 3) {
         let product = getRandomProduct();
         
-        if(!options.includes(product) && !duplicates.includes(product)) {
-            options.push(product);
-            loops++;
+        if(!newOptions.includes(product) && !previousOptions.includes(product)) {
+            newOptions.push(product);
+            // loops++;
 
             switch(product.code) {
                 case ('bag'): 
@@ -127,8 +128,8 @@ export function populateOptions() {
             }
         }
     }
-    console.log(productViews);
-    store.save('Options', options);
-    return options;
+    store.save('Options', newOptions);
+    return newOptions;
 }
 
+export default populateOptions;

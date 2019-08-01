@@ -1,6 +1,4 @@
-import products from '../src/products.js';
-import store from '../src/store.js';
-import { populateOptions } from '../src/render-options.js';
+import populateOptions from '../src/populate-options.js';
 
 const test = QUnit.test;
 
