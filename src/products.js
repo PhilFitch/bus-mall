@@ -3,6 +3,7 @@ const bag = {
     code: 'bag',
     name: 'Bag',
     img: 'asset/products/bag.jpg',
+    //object: bag
 };
 
 const banana = {
