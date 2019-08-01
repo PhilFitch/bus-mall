@@ -33,7 +33,13 @@ const store = {
         }
         return gotDuplicates;
     },
-    
+    getProductViews() {
+        let productViews = store.get('productViews');
+        if(!productViews) {
+            productViews = [];
+        }
+        return productViews;
+    }
 };
 
 export default store;

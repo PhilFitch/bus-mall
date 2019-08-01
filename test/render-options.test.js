@@ -11,3 +11,4 @@ test('puts three products in the options array', assert => {
     
     assert.equal(options.length, 3);
 });
+

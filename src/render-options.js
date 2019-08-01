@@ -22,3 +22,4 @@ export function populateOptions() {
     store.save('Options', options);
     return options;
 }
+
