@@ -22,17 +22,42 @@ window.onload = loadImages();
 
 leftButton.addEventListener('click', () => {
     event.preventDefault();
-    console.log('left!');
+    turns++;
+    const option = options[0];
+    trackChoices(option);
+    console.log(choices);
 });
 
 centerButton.addEventListener('click', () => {
     event.preventDefault();
-    console.log('center!');
+    turns++;
+    const option = options[1];
+    trackChoices(option);
+    console.log(choices);
     
 });
 
 rightButton.addEventListener('click', () => {
     event.preventDefault();
-    console.log('right!');
+    turns++;
+    const option = options[2];
+    trackChoices(option);
+    console.log(choices);
 
 });
+
+function trackChoices(option) {
+    for(let i = 0; i < choices.length; i++) {
+        // const choice = choices[i];
+        if(option.name === choices[i].name) {
+            choices[i].count++;
+            return;
+        } 
+    }
+    const choice = { name: option.name, count: 1};
+    choices.push(choice);
+}
+
+
+
+
