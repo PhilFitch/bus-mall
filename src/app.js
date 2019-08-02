@@ -7,10 +7,15 @@ const rightImage = document.getElementById('right-image');
 const leftButton = document.getElementById('left-button');
 const centerButton = document.getElementById('center-button');
 const rightButton = document.getElementById('right-button');
+const gameSection = document.getElementById('choices');
+const resultsSection = document.getElementById('results');
+const startOver = document.getElementById('refresh');
 
 let turns = 0;
 let choices = [];
 let options = populateOptions();
+
+resultsSection.classList.add('hidden');
 
 function loadImages(options) {
     leftImage.src = options[0].img;
@@ -20,37 +25,52 @@ function loadImages(options) {
 window.onload = loadImages(options);
 
 
+
 leftButton.addEventListener('click', () => {
     event.preventDefault();
     turns++;
-    const option = options[0];
-    trackChoices(option);
-    options = populateOptions();
-    loadImages(options);
-    console.log(turns);
+    if(turns < 5) {
+        const option = options[0];
+        trackChoices(option);
+        options = populateOptions();
+        loadImages(options);
+        console.log(turns);
+    } else {
+        gameSection.classList.add('hidden');
+        resultsSection.classList.remove('hidden');
+    }
 });
 
 centerButton.addEventListener('click', () => {
     event.preventDefault();
     turns++;
-    const option = options[1];
-    trackChoices(option);
-    options = populateOptions();
-    loadImages(options);
-    console.log(turns);
-    
+    if(turns < 5) {
+        const option = options[1];
+        trackChoices(option);
+        options = populateOptions();
+        loadImages(options);
+        console.log(turns);
+    } else {
+        gameSection.classList.add('hidden');
+        resultsSection.classList.remove('hidden');
+    }
 });
 
 rightButton.addEventListener('click', () => {
     event.preventDefault();
     turns++;
-    const option = options[2];
-    trackChoices(option);
-    options = populateOptions();
-    loadImages(options);
-    console.log(turns);
-
+    if(turns < 5) {
+        const option = options[2];
+        trackChoices(option);
+        options = populateOptions();
+        loadImages(options);
+        console.log(turns);
+    } else {
+        gameSection.classList.add('hidden');
+        resultsSection.classList.remove('hidden');
+    }
 });
+
 
 function trackChoices(option) {
     for(let i = 0; i < choices.length; i++) {
@@ -64,6 +84,8 @@ function trackChoices(option) {
     choices.push(choice);
 }
 
-
+startOver.addEventListener('click', () => {
+    window.location.reload(true);
+});
 
 

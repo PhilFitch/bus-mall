@@ -8,6 +8,10 @@ header {
     color: yellow;
 }
 
+.hidden {
+    display: none;
+}
+
 h1 {
     font-size: 5rem;    
 }
@@ -81,4 +85,9 @@ table {
     background-color: maroon;
     border-radius: 15%;
     margin: 20px;
+    transition: background-color 0.5s;
+}
+
+#refresh:hover {
+    background-color: red;
 }
