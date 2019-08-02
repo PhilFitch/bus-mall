@@ -1,12 +1,17 @@
-//import { updateProductViews } from '../src/data.js';
-import store from '../src/store.js';
+// import productViewsConstructor from '../src/data.js';
+// import store from '../src/store.js';
 
-const test = QUnit.test;
+// const test = QUnit.test;
 
-QUnit.module('data');
+// QUnit.module('data');
 
-store.storage = window.sessionStorage;
+// store.storage = window.sessionStorage;
 
-QUnit.testStart(() =>{
-    store.storage.clear();
-});
+// QUnit.testStart(() =>{
+//     store.storage.clear();
+// });
+
+// test ('constructs productViews', () => {
+//     productViewsConstructor();
+//     console.log(productViews);
+// });

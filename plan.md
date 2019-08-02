@@ -1,6 +1,6 @@
-Page load:
+x Page load:
 
-Reset user data
+x Reset user data
 
 x Get products from local storage (bootstrap)
 
@@ -12,19 +12,19 @@ x Get random product 3 (double no-dup) (position right)
 
 x Track product views
 
-post products to page
+x post products to page
 
-User choice (click)
+x User choice (click)
 
-Add turn
+x Add turn
 
-Track choice
+x Track choice
 
-Done? (turns < 26)
-No - reset display, goto line 7
-Yes - continue
+(x) Done? (turns < 26)
+x No - reset display, goto line 7
+x Yes - continue
 
-Hide game
+x Hide game
 
 Get data (Items viewed, views, clicks)
 
@@ -33,8 +33,8 @@ Compute ratings
 
 Add data to table
 
-Display table
+x Display table
 
-Play again? (button)
+x Play again? (button)
 
-onclick - goto line 1
+x onclick - goto line 1

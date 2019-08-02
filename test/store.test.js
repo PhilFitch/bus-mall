@@ -39,11 +39,11 @@ test('returns empty array for options', assert => {
     assert.deepEqual(gotOptions, []);
 });
 
-test('returns empty array for duplicates', assert => {
-    const gotDuplicates = store.getDuplicates();
+// test('returns empty array for duplicates', assert => {
+//     const gotDuplicates = store.getDuplicates();
 
-    assert.deepEqual(gotDuplicates, []);
-});
+//     assert.deepEqual(gotDuplicates, []);
+// });
 
 // test('returns product by index', assert => {
 //     const index = 0;

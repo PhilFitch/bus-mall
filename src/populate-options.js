@@ -2,49 +2,30 @@ import products from './products.js';
 import store from './store.js';
 
 
-let bagViews = [];
-let bananaViews = [];
-let bathroomViews = [];
-let bootsViews = [];
-let breakfastViews = [];
-let bubblegumViews = [];
-let chairViews = [];
-let cthulhuViews = [];
-let dogDuckViews = [];
-let dragonViews = [];
-let penViews = [];
-let petSweepViews = [];
-let scissorsViews = [];
-let sharkViews = [];
-let sweepViews = [];
-let tauntaunViews = [];
-let unicornViews = [];
-let usbViews = [];
-let waterCanViews = [];
-let wineGlassViews = [];
+let bagViews = 0;
+let bananaViews = 0;
+let bathroomViews = 0;
+let bootsViews = 0;
+let breakfastViews = 0;
+let bubblegumViews = 0;
+let chairViews = 0;
+let cthulhuViews = 0;
+let dogDuckViews = 0;
+let dragonViews = 0;
+let penViews = 0;
+let petSweepViews = 0;
+let scissorsViews = 0;
+let sharkViews = 0;
+let sweepViews = 0;
+let tauntaunViews = 0;
+let unicornViews = 0;
+let usbViews = 0;
+let waterCanViews = 0;
+let wineGlassViews = 0;
 
-let productViews = [
-    bagViews,
-    bananaViews,
-    bathroomViews,
-    bootsViews,
-    breakfastViews,
-    bubblegumViews,
-    chairViews,
-    cthulhuViews,
-    dogDuckViews,
-    dragonViews,
-    penViews,
-    petSweepViews,
-    scissorsViews,
-    sharkViews,
-    sweepViews,
-    tauntaunViews,
-    unicornViews,
-    usbViews,
-    waterCanViews,
-    wineGlassViews,
-];
+
+
+
 
 
 function getRandomProduct() {
@@ -53,78 +34,102 @@ function getRandomProduct() {
 }
 
 export function populateOptions() {
-    let previousOptions = store.getOptions(); //previous 3 options
+    let previousOptions = store.getOptions(); //previous 3 products
     let newOptions = [];
     while(newOptions.length < 3) {
         let product = getRandomProduct();
         
         if(!newOptions.includes(product) && !previousOptions.includes(product)) {
             newOptions.push(product);
-            
-            switch(product.code) {
-                case ('bag'): 
-                    bagViews.push('view');
-                    break;
-                case ('banana'):
-                    bananaViews.push('view');
-                    break;
-                case ('bathroom'):
-                    bathroomViews.push('view');
-                    break;
-                case ('boots'):
-                    bootsViews.push('view');
-                    break;
-                case ('breakfast'):
-                    breakfastViews.push('view');
-                    break;
-                case ('bubblegum'):
-                    bubblegumViews.push('view');
-                    break;
-                case ('chair'):
-                    chairViews.push('view');
-                    break;
-                case ('cthulhu'):
-                    cthulhuViews.push('view');
-                    break;
-                case ('dog-duck'):
-                    dogDuckViews.push('view');
-                    break;
-                case ('dragon'):
-                    dragonViews.push('view');
-                    break;
-                case ('pen'):
-                    penViews.push('view');
-                    break;
-                case ('pet-sweep'):
-                    petSweepViews.push('view');
-                    break;
-                case ('scissors'):
-                    scissorsViews.push('view');
-                    break;
-                case ('shark'):
-                    sharkViews.push('view');
-                    break;
-                case ('sweep'):
-                    sweepViews.push('view');
-                    break;
-                case ('tauntaun'):
-                    tauntaunViews.push('view');
-                    break;
-                case ('unicorn'):
-                    unicornViews.push('view');
-                    break;
-                case ('usb'):
-                    usbViews.push('view');
-                    break;
-                case ('water-can'):
-                    waterCanViews.push('view');
-                    break;
-                case ('wine-glass'):
-                    wineGlassViews.push('view');
-                    break;
-            }
         }
+            
+        switch(product.code) {
+            case ('bag'): 
+                bagViews++;
+                break;
+            case ('banana'):
+                bananaViews++;
+                break;
+            case ('bathroom'):
+                bathroomViews++;
+                break;
+            case ('boots'):
+                bootsViews++;
+                break;
+            case ('breakfast'):
+                breakfastViews++;
+                break;
+            case ('bubblegum'):
+                bubblegumViews++;
+                break;
+            case ('chair'):
+                chairViews++;
+                break;
+            case ('cthulhu'):
+                cthulhuViews++;
+                break;
+            case ('dog-duck'):
+                dogDuckViews++;
+                break;
+            case ('dragon'):
+                dragonViews++;
+                break;
+            case ('pen'):
+                penViews++;
+                break;
+            case ('pet-sweep'):
+                petSweepViews++;
+                break;
+            case ('scissors'):
+                scissorsViews++;
+                break;
+            case ('shark'):
+                sharkViews++;
+                break;
+            case ('sweep'):
+                sweepViews++;
+                break;
+            case ('tauntaun'):
+                tauntaunViews++;
+                break;
+            case ('unicorn'):
+                unicornViews++;
+                break;
+            case ('usb'):
+                usbViews++;
+                break;
+            case ('water-can'):
+                waterCanViews++;
+                break;
+            case ('wine-glass'):
+                wineGlassViews++;
+                break;
+        }
+            
     }
+    let productViews = [
+        bagViews,
+        bananaViews,
+        bathroomViews,
+        bootsViews,
+        breakfastViews,
+        bubblegumViews,
+        chairViews,
+        cthulhuViews,
+        dogDuckViews,
+        dragonViews,
+        penViews,
+        petSweepViews,
+        scissorsViews,
+        sharkViews,
+        sweepViews,
+        tauntaunViews,
+        unicornViews,
+        usbViews,
+        waterCanViews,
+        wineGlassViews,
+    ];
+
     console.log(productViews);
     store.save('Options', newOptions);
     return newOptions;
