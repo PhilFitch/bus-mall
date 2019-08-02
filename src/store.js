@@ -26,13 +26,13 @@ const store = {
         }
         return gotOptions;
     },
-    getDuplicates() {
-        let gotDuplicates = store.get('Duplicates');
-        if(!gotDuplicates) {
-            gotDuplicates = [];
-        }
-        return gotDuplicates;
-    },
+    // getDuplicates() {
+    //     let gotDuplicates = store.get('Duplicates');
+    //     if(!gotDuplicates) {
+    //         gotDuplicates = [];
+    //     }
+    //     return gotDuplicates;
+    // },
     getProductViews() {
         let productViews = store.get('productViews');
         if(!productViews) {

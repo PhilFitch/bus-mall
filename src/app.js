@@ -12,12 +12,12 @@ let turns = 0;
 let choices = [];
 let options = populateOptions();
 
-function loadImages() {
+function loadImages(options) {
     leftImage.src = options[0].img;
     centerImage.src = options[1].img;
     rightImage.src = options[2].img;
 }
-window.onload = loadImages();
+window.onload = loadImages(options);
 
 
 leftButton.addEventListener('click', () => {
@@ -25,7 +25,9 @@ leftButton.addEventListener('click', () => {
     turns++;
     const option = options[0];
     trackChoices(option);
-    console.log(choices);
+    options = populateOptions();
+    loadImages(options);
+    console.log(turns);
 });
 
 centerButton.addEventListener('click', () => {
@@ -33,7 +35,9 @@ centerButton.addEventListener('click', () => {
     turns++;
     const option = options[1];
     trackChoices(option);
-    console.log(choices);
+    options = populateOptions();
+    loadImages(options);
+    console.log(turns);
     
 });
 
@@ -42,7 +46,9 @@ rightButton.addEventListener('click', () => {
     turns++;
     const option = options[2];
     trackChoices(option);
-    console.log(choices);
+    options = populateOptions();
+    loadImages(options);
+    console.log(turns);
 
 });
 
