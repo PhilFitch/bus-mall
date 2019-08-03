@@ -40,6 +40,7 @@ export function populateOptions() {
         let product = getRandomProduct();
         
         if(!newOptions.includes(product) && !previousOptions.includes(product)) {
+            console.log(newOptions, previousOptions);
             newOptions.push(product);
         }
             
