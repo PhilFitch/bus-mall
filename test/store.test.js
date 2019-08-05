@@ -41,7 +41,7 @@ test('returns empty array for options', assert => {
 
 
 test('returns product by index', assert => {
-    const index = 0
+    const index = 0;
     const product = store.getProduct(index);
 
     assert.deepEqual(products[0], product);

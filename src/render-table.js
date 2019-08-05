@@ -1,7 +1,7 @@
 
 import products from './products.js';
 
-let resultsTable = document.getElementById('results-table');
+// let resultsTable = document.getElementById('results-table');
 
 
 export function collectTableData(choices, productViews) {
