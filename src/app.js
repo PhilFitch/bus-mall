@@ -1,5 +1,6 @@
 import store from './store.js';
 import populateOptions from './populate-options.js';
+import { renderTable, collectTableData } from '../src/render-table.js';
 
 const leftImage = document.getElementById('left-image');
 const centerImage = document.getElementById('center-image');
@@ -14,9 +15,13 @@ const leftFig = document.getElementById('left-fig');
 const centerFig = document.getElementById('center-fig');
 const rightFig = document.getElementById('right-fig');
 
+
 let turns = 0;
 let choices = [];
 let options = populateOptions();
+let resultsTable = document.getElementById('results-table');
+let productViews = store.get('Product-Views');
+let tableData = collectTableData(choices, productViews);
 // console.log(resultsSection);
 resultsSection.classList.add('hidden');
 
@@ -44,6 +49,7 @@ leftButton.addEventListener('click', () => {
         options = populateOptions();
         loadImages(options);
     } else {
+        resultsTable.innerHTML = renderTable(tableData, resultsTable);
         gameSection.classList.add('hidden');
         resultsSection.classList.remove('hidden');
     }
@@ -59,6 +65,7 @@ centerButton.addEventListener('click', () => {
         options = populateOptions();
         loadImages(options);
     } else {
+        resultsTable.innerHTML = renderTable(tableData, resultsTable);
         gameSection.classList.add('hidden');
         resultsSection.classList.remove('hidden');
     }
@@ -74,6 +81,8 @@ rightButton.addEventListener('click', () => {
         options = populateOptions();
         loadImages(options);
     } else {
+        resultsTable.innerHTML = renderTable(tableData, resultsTable);
+        console.log(resultsTable);
         gameSection.classList.add('hidden');
         resultsSection.classList.remove('hidden');
     }
@@ -93,6 +102,8 @@ function trackChoices(option) {
 }
 
 // export default choices;
+
+
 
 startOver.addEventListener('click', () => {
     window.location.reload(true);

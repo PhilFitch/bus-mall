@@ -2,7 +2,7 @@ import populateOptions from '../src/populate-options.js';
 
 const test = QUnit.test;
 
-QUnit.module('render-options');
+QUnit.module('populate-options');
 
 test('puts three products in the options array', assert => {
     let options = populateOptions();

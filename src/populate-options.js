@@ -133,6 +133,7 @@ export function populateOptions() {
 
     console.log(productViews);
     store.save('Options', newOptions);
+    store.save('Product-Views', productViews);
     return newOptions;
 }
 
