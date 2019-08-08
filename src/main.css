@@ -96,3 +96,10 @@ table {
 #refresh:hover {
     background-color: red;
 }
+
+#results-table tbody tr td img {
+    width: 60px;
+    height: 80px;
+    border-radius: 10%;
+    object-fit: cover;
+}

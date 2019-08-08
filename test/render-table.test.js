@@ -18,7 +18,7 @@ test('returns table data', assert => {
 
 test('renders a table', assert => {
     const tableData = collectTableData(choices, productViews);
-    const expected = '<tbody id="results-table"><tr><td scope="row"><img src="assets/products/bag.jpg" alt="Bag"></td><td>5</td><td>3</td><td>⭐⭐⭐</td></tr></tbody>';
+    const expected = '<tbody><tr><td scope="row"><img src="assets/products/bag.jpg" alt="Bag"></td><td>5</td><td>3</td><td>⭐⭐⭐</td></tr></tbody>';
     const bagTable = renderTable(tableData).outerHTML;
     
     assert.deepEqual(bagTable, expected);

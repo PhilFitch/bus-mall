@@ -1,8 +1,6 @@
 
 import products from './products.js';
 
-// let resultsTable = document.getElementById('results-table');
-
 
 export function collectTableData(choices, productViews) {
     let tableData = [];
@@ -21,50 +19,10 @@ export function collectTableData(choices, productViews) {
     return tableData;
 }
 
-// console.log(tableData);
-
-
-// export function renderTable(tableData) {
-    
-//     for(let i = 0; i < tableData.length; i++) {
-//         const tr = document.createElement('tr');
-
-//         const tdCellImage = document.createElement('td');
-//         // const productImage = document.createElement('img');
-//         // productImage.src = tableData[i].image;
-//         // tdCellImage.appendChild(productImage);
-//         tr.appendChild(tdCellImage);
-//         return tr;
-// //     //     let newRow = resultsTable.insertRow;
-// //     //     let cell1 = newRow.insertCell(-1);
-// //     //     let cell2 = newRow.insertCell(-1);
-// //     //     let cell3 = newRow.insertCell(-1);
-// //     //     let cell4 = newRow.insertCell(-1);
-// //     //     cell1.innerHTML = tableData[i].img;
-// //     //     cell2.innerHTML = tableData[i].views;
-// //     //     cell3.innerHTML = tableData[i].clicks;
-// //     //     let percent = (tableData[i].clicks / tableData[i].views);
-// //     //     if(percent < .25) {
-// //     //         cell4.innerHTML = '⭐';
-// //     //     }
-// //     //     else if(.25 <= percent < .5) {
-// //     //         cell4.innerHTML = '⭐⭐';
-// //     //     }
-// //     //     else if(.5 <= percent < .75) {
-// //     //         cell4.innerHTML = '⭐⭐⭐';
-// //     //     }
-// //     //     else {
-// //     //         cell4.innerHTML = '⭐⭐⭐⭐';
-// //     //     } 
-//         // return tr;
-//     }
-// }
-
 
 export function renderTable(tableData) {
     
-    let resultsTable = document.createElement('tbody');
-    resultsTable.id = 'results-table';
+    const resultsTable = document.createElement('tbody');
 
     for(let i = 0; i < tableData.length; i++) {
         

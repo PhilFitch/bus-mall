@@ -15,14 +15,13 @@ const leftFig = document.getElementById('left-fig');
 const centerFig = document.getElementById('center-fig');
 const rightFig = document.getElementById('right-fig');
 
-const caption = '<caption>Your Favorite Products</caption>';
-const tHead = '<thead><tr><th scope="col">Item</th><th scope="col">Views</th><th scope="col">Clicks</th><th scope="col">Your Rating</th></tr></thead>';
+
 let turns = 0;
 let choices = [];
 let options = populateOptions();
+
 let resultsTable = document.getElementById('results-table');
-let productViews = store.get('Product-Views');
-let tableData = collectTableData(choices, productViews);
+
 
 resultsSection.classList.add('hidden');
 
@@ -51,10 +50,12 @@ leftButton.addEventListener('click', () => {
         options = populateOptions();
         loadImages(options);
     } else {
-        resultsTable.innerHTML = renderTable(tableData, resultsTable);
+        // resultsTable.innerHTML = renderTable(tableData, resultsTable);
+        let productViews = store.get('Product-Views');
+        let tableData = collectTableData(choices, productViews);
+        postTable(tableData);
         gameSection.classList.add('hidden');
         resultsSection.classList.remove('hidden');
-        console.log(tableData);
     }
 });
 
@@ -67,7 +68,10 @@ centerButton.addEventListener('click', () => {
         options = populateOptions();
         loadImages(options);
     } else {
-        resultsTable.innerHTML = renderTable(tableData, resultsTable);
+        // resultsTable.innerHTML = renderTable(tableData, resultsTable);
+        let productViews = store.get('Product-Views');
+        let tableData = collectTableData(choices, productViews);
+        postTable(tableData);
         gameSection.classList.add('hidden');
         resultsSection.classList.remove('hidden');
     }
@@ -82,8 +86,10 @@ rightButton.addEventListener('click', () => {
         options = populateOptions();
         loadImages(options);
     } else {
-        resultsTable.innerHTML = renderTable(tableData, resultsTable);
-        console.log(resultsTable);
+        // resultsTable.innerHTML = renderTable(tableData, resultsTable);
+        let productViews = store.get('Product-Views');
+        let tableData = collectTableData(choices, productViews);
+        postTable(tableData);
         gameSection.classList.add('hidden');
         resultsSection.classList.remove('hidden');
     }
@@ -102,13 +108,17 @@ function trackChoices(option) {
 }
 
 
-function postTable() {
+function postTable(tableData) {
+    const caption = document.createElement('caption');
+    const tHead = document.createElement('thead');
+    const tBody = renderTable(tableData);
     resultsTable.appendChild(caption);
     resultsTable.appendChild(tHead);
-    resultsTable.appendChild(renderTable(tableData));
+    resultsTable.appendChild(tBody).outerHTML;
+    caption.textContent = 'Your Favorite Products';
+    tHead.innerHTML = '<tr><th scope="col">Item</th><th scope="col">Views</th><th scope="col">Clicks</th><th scope="col">Your Rating</th></tr>';
 }
 
-postTable(renderTable());
 
 startOver.addEventListener('click', () => {
     window.location.reload(true);

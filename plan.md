@@ -26,12 +26,12 @@ x Yes - continue
 
 x Hide game
 
-Get data (Items viewed, views, clicks)
+x Get data (Items viewed, views, clicks)
 
-Compute ratings
+x Compute ratings
 (clicks/views -> stars 1-4 (25%ile))
 
-Add data to table
+x Add data to table
 
 x Display table
 
