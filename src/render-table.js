@@ -62,7 +62,9 @@ export function collectTableData(choices, productViews) {
 
 
 export function renderTable(tableData) {
-    let tableRows = [];
+    
+    let resultsTable = document.createElement('tbody');
+    resultsTable.id = 'results-table';
 
     for(let i = 0; i < tableData.length; i++) {
         
@@ -70,12 +72,10 @@ export function renderTable(tableData) {
         
         const tda = document.createElement('td');
         tda.scope = 'row';
-        
         const img = document.createElement('img');
         img.src = tableData[i].image;
         img.alt = tableData[i].name;
         tda.appendChild(img);
-        
         tr.appendChild(tda);
         
         const tdb = document.createElement('td');
@@ -87,7 +87,6 @@ export function renderTable(tableData) {
         tr.appendChild(tdc);
         
         const percent = (tableData[i].clicks / tableData[i].views);
-        console.log(percent);
         const tdd = document.createElement('td');
         if(percent < .25) {
             tdd.textContent = '⭐';
@@ -102,7 +101,7 @@ export function renderTable(tableData) {
             tdd.textContent = '⭐⭐⭐⭐';
         }
         tr.appendChild(tdd);
-        tableRows.push(tr);
-        return tr;
+        resultsTable.appendChild(tr);
     }
+    return resultsTable;
 }

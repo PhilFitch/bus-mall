@@ -15,15 +15,17 @@ const leftFig = document.getElementById('left-fig');
 const centerFig = document.getElementById('center-fig');
 const rightFig = document.getElementById('right-fig');
 
-
+const caption = '<caption>Your Favorite Products</caption>';
+const tHead = '<thead><tr><th scope="col">Item</th><th scope="col">Views</th><th scope="col">Clicks</th><th scope="col">Your Rating</th></tr></thead>';
 let turns = 0;
 let choices = [];
 let options = populateOptions();
 let resultsTable = document.getElementById('results-table');
 let productViews = store.get('Product-Views');
 let tableData = collectTableData(choices, productViews);
-// console.log(resultsSection);
+
 resultsSection.classList.add('hidden');
+
 
 function loadImages(options) {
     leftImage.src = options[0].img;
@@ -52,8 +54,8 @@ leftButton.addEventListener('click', () => {
         resultsTable.innerHTML = renderTable(tableData, resultsTable);
         gameSection.classList.add('hidden');
         resultsSection.classList.remove('hidden');
+        console.log(tableData);
     }
-    console.log(choices);
 });
 
 centerButton.addEventListener('click', () => {
@@ -69,7 +71,6 @@ centerButton.addEventListener('click', () => {
         gameSection.classList.add('hidden');
         resultsSection.classList.remove('hidden');
     }
-    console.log(choices);
 });
 
 rightButton.addEventListener('click', () => {
@@ -86,7 +87,6 @@ rightButton.addEventListener('click', () => {
         gameSection.classList.add('hidden');
         resultsSection.classList.remove('hidden');
     }
-    console.log(choices);
 });
 
 
@@ -101,9 +101,14 @@ function trackChoices(option) {
     choices.push(choice);
 }
 
-// export default choices;
 
+function postTable() {
+    resultsTable.appendChild(caption);
+    resultsTable.appendChild(tHead);
+    resultsTable.appendChild(renderTable(tableData));
+}
 
+postTable(renderTable());
 
 startOver.addEventListener('click', () => {
     window.location.reload(true);
