@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BusMall</title>
+    <link rel="stylesheet" type="text/css" href="src/main.css">
+</head>
+
+<body>
+    
+    <header>
+        <h1>Bus Mall</h1>
+        <h2>Market Survey</h2>
+    </header>
+    
+    <main>
+       
+        <div id="choices">
+           
+            <p>Click on the item below you are <em>most</em> likely to purchase:</p>
+            
+            <section id="products">
+
+                <label>
+                    <figure id="left">
+                        <img id="left-image" class="chooser" src="" alt="">
+                        <figcaption id=left-fig></figcaption>
+                        <input class="button" type="button" id="left-button">
+                    </figure>
+                </label>
+                
+                <label>
+                    <figure id="center">
+                        <img id="center-image" class="chooser" src="" alt="">
+                        <figcaption id=center-fig></figcaption>
+                    </figure>
+                    <input class="button" type="button" id="center-button">
+                </label>
+                
+                <label>
+                    <figure id="right">
+                        <img id="right-image" class="chooser" src="" alt="">
+                        <figcaption id=right-fig></figcaption>
+                    </figure>
+                    <input class="button" type="button" id="right-button">
+                </label>
+            
+            </section>
+        
+        </div>
+
+        <div id="results">
+
+            <table id="results-table"></table>
+
+            <button id="refresh" type="button">
+                Start Over
+            </button>
+
+        </div>
+
+    </main>
+    <script type="module" src="./src/app.js" ></script>
+</body>
+
+</html>
